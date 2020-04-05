@@ -14,30 +14,24 @@
 # limitations under the License.
 #
 
-# This files???
-#$(call inherit-product, $(LOCAL_PATH)/pre-base.mk)
-#$(call inherit-product-if-exists, vendor/google/gapps.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/treble_common.mk)
 
-#TODO: Add this file
-$(call inherit-product, device/huawei/vtr/full_vtr.mk)
+PRODUCT_PROPERTY_OVERRIDES := \
+    keyguard.no_require_sim=true
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
+# Inherit from berkeley device
+$(call inherit-product, device/huawei/vtr/device.mk)
 
-#RR_BUILDTYPE = RevTechs.me
+# TODO: Probably not necessary
+#PRODUCT_COPY_FILES += \
+#   device/huawei/vky/prebuilt/system/media/bootanimation.zip:system/media/bootanimation.zip
 
-PRODUCT_NAME := lineage_vtr
+# Device identifier. This must come after all inclusions
+PRODUCT_NAME := full_vtr
 PRODUCT_DEVICE := vtr
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := P10
-
-# TODO: Update this
-# Override device name
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=kirin960
-
-#previus: kirin970

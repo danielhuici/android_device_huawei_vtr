@@ -66,7 +66,7 @@ BOARD_HARDWARE_CLASS += \
     $(DEVICE_PATH)/lineagehw
 
 # Partitions
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4915724288
+#BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4915724288
 # TODO: Modified partition sysimage. Should be OK.
 
 # Properties

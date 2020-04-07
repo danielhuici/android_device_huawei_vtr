@@ -15,10 +15,10 @@
 #
 
 # This files???
-#$(call inherit-product, $(LOCAL_PATH)/pre-base.mk)
-#$(call inherit-product-if-exists, vendor/google/gapps.mk)
+$(call inherit-product, $(LOCAL_PATH)/pre-base.mk)
+$(call inherit-product-if-exists, vendor/google/gapps.mk)
 
-#TODO: Add this file
+
 $(call inherit-product, device/huawei/vtr/full_vtr.mk)
 
 # Inherit some common Lineage stuff.
@@ -38,6 +38,6 @@ PRODUCT_MODEL := P10
 # TODO: Update this
 # Override device name
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=kirin960
+    TARGET_DEVICE=kirin970
 
 #previus: kirin970

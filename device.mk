@@ -20,6 +20,11 @@ $(call inherit-product-if-exists, vendor/opengapps/build/opengapps-packages.mk)
 GAPPS_VARIANT := micro
 GAPPS_FORCE_BROWSER_OVERRIDES := true
 GAPPS_FORCE_MMS_OVERRIDES := true
+
+
+PRODUCT_NAME := lineage_vtr
+
+
 PRODUCT_PACKAGES += \
     Chrome \
     Photos
@@ -28,8 +33,8 @@ GAPPS_EXCLUDED_PACKAGES := GoogleHome
 
 #TODO: Add overlay folder
 # Overlays
-#DEVICE_PACKAGE_OVERLAYS += \
-#    $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
@@ -125,6 +130,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 #     telephony-huawei
 
 # Remove unwanted packages
+# TODO: Commented due to error at compilation
 PRODUCT_PACKAGES += \
     RemovePackages
 

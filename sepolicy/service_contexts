@@ -1,0 +1,3 @@
+ims_config                                u:object_r:ims_config_service:s0
+ims_ut                                    u:object_r:ims_ut_service:s0
+phone_huawei                              u:object_r:radio_service:s0

@@ -1,0 +1,14 @@
+# GSI always generate dex pre-opt in system image
+ro.cp_system_other_odex=0
+
+# Enable ADB authentication
+ro.adb.secure=1
+
+# Enable Root access ADB and APPS
+persist.sys.root_access=3
+
+# Enable FP nav by default
+sys.fpnav.enabled=1
+
+# Make sdcards visibile in StorageManager
+persist.sys.adoptable_fbe=true

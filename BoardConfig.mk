@@ -74,4 +74,4 @@ TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
 # SELinux
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/huawei/vky/sepolicy
+    device/huawei/vtr/sepolicy

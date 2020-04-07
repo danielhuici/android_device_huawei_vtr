@@ -15,7 +15,7 @@
 #
 
 # TODO: Adding vendor file
-$(call inherit-product-if-exists, vendor/huawei/vky/vky-vendor.mk)
+$(call inherit-product-if-exists, vendor/huawei/vtr/vtr-vendor.mk)
 $(call inherit-product-if-exists, vendor/opengapps/build/opengapps-packages.mk)
 GAPPS_VARIANT := micro
 GAPPS_FORCE_BROWSER_OVERRIDES := true
